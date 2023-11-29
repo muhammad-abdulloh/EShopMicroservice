@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "eshop.api": "StartDebugging",
-        "eshopapigateway": "StartDebugging"
+        "eshopapigateway": "StartDebugging",
+        "basket.api": "StartDebugging"
       }
     }
   }

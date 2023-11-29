@@ -15,6 +15,17 @@ services:
     ports:
       - 7070:1433 
 
+  # basketdb:
+  #   container_name: basket-dbcontainer
+  #   image: mcr.microsoft.com/mssql/server:2022-latest
+  #   environment:
+  #     - ACCEPT_EULA=Y
+  #     - SA_PASSWORD=ttr%$s+65Y22#
+  #   networks:
+  #     - backend
+  #   ports:
+  #     - 7077:1433
+
   eshop.api:
     container_name: eshopapi-container
     image: ${DOCKER_REGISTRY-}eshopapi
@@ -38,4 +49,17 @@ services:
     networks:
       - backend
 
+
+
+  basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
+    build:
+      context: .
+      dockerfile: src/ServiceTwo/Basket.API/Dockerfile
+    networks:
+      - backend
+    environment:
+      - DB_HOST=eshopdb
+      - DB_NAME=BasketDatabase
+      - DB_SA_PASSWORD=pa@2or$%%dd
 

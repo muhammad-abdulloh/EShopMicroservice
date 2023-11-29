@@ -1,17 +1,29 @@
 {
   "Routes": [
-      {
-        "UpstreamPathTemplate": "/api/Orders",
-        "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
-        "DownstreamScheme": "http",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "eshop.api",
-            "Port": 80
-          }
-        ],
-        "DownstreamPathTemplate": "/api/Orders"
-      }
+    {
+      "UpstreamPathTemplate": "/api/Orders",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eshop.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Orders"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Basket",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "basket.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Basket"
+    }
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:8015"
