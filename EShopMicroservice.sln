@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C89384D4-2B21-46E3-8B41-97A19832E772}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceOne", "ServiceOne", "{2BA6CC73-5F0E-4A6E-8FAB-88F12E24473A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceTwo", "ServiceTwo", "{ACD2A02C-B3F3-4968-A393-6E1CE5C8661A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EShop.API", "src\ServiceOne\EShop.API\EShop.API.csproj", "{90CA79EE-03F9-4EE6-8C69-ED8882D94BC2}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3005B865-6088-46FD-86EE-B8E5B0E58CF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90CA79EE-03F9-4EE6-8C69-ED8882D94BC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90CA79EE-03F9-4EE6-8C69-ED8882D94BC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90CA79EE-03F9-4EE6-8C69-ED8882D94BC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90CA79EE-03F9-4EE6-8C69-ED8882D94BC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3005B865-6088-46FD-86EE-B8E5B0E58CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3005B865-6088-46FD-86EE-B8E5B0E58CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3005B865-6088-46FD-86EE-B8E5B0E58CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3005B865-6088-46FD-86EE-B8E5B0E58CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2BA6CC73-5F0E-4A6E-8FAB-88F12E24473A} = {C89384D4-2B21-46E3-8B41-97A19832E772}
+		{ACD2A02C-B3F3-4968-A393-6E1CE5C8661A} = {C89384D4-2B21-46E3-8B41-97A19832E772}
+		{90CA79EE-03F9-4EE6-8C69-ED8882D94BC2} = {2BA6CC73-5F0E-4A6E-8FAB-88F12E24473A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A989D3C-8E0E-4C35-9CC2-2A69C38533D1}
+	EndGlobalSection
+EndGlobal

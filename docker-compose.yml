@@ -1,0 +1,31 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  eshopdb:
+    container_name: eshop-dbcontainer
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=pa@2or$%%dd
+    networks:
+      - backend
+    ports:
+      - 7070:1433 
+
+  eshop.api:
+    container_name: eshopapi-container
+    image: ${DOCKER_REGISTRY-}eshopapi
+    build:
+      context: .
+      dockerfile: src/ServiceOne/EShop.API/Dockerfile
+    networks:
+      - backend
+    ports:
+      - 7071:80 
+    environment:
+      - DB_HOST=eshopdb
+      - DB_NAME=EShopDb
+      - DB_SA_PASSWORD=pa@2or$%%dd
