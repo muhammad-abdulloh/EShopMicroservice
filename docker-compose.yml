@@ -23,9 +23,19 @@ services:
       dockerfile: src/ServiceOne/EShop.API/Dockerfile
     networks:
       - backend
-    ports:
-      - 7071:80 
     environment:
       - DB_HOST=eshopdb
       - DB_NAME=EShopDb
       - DB_SA_PASSWORD=pa@2or$%%dd
+  
+  eshopapigateway:
+    image: ${DOCKER_REGISTRY-}eshopapigateway
+    build:
+      context: .
+      dockerfile: src/Gateway/EShopApiGateway/Dockerfile
+    ports:
+      - 7080:80    
+    networks:
+      - backend
+
+

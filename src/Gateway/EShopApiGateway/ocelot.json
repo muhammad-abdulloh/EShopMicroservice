@@ -1,0 +1,19 @@
+{
+  "Routes": [
+      {
+        "UpstreamPathTemplate": "/api/Orders",
+        "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+          {
+            "Host": "eshop.api",
+            "Port": 80
+          }
+        ],
+        "DownstreamPathTemplate": "/api/Orders"
+      }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8015"
+  }
+}

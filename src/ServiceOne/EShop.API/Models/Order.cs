@@ -14,7 +14,6 @@ namespace EShop.API.Models
         [Column("name")]
         public string Name { get; set; }
 
-
         [Column("description")]
         public string Description { get; set; }
     }
