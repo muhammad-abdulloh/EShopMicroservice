@@ -13,7 +13,7 @@ namespace JWTAuthentificationManager
     {
         public static void AddCustomJwtAuthentication(this IServiceCollection services)
         {
-            services.AddAuthentication( x =>
+            services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -28,8 +28,8 @@ namespace JWTAuthentificationManager
                     ValidateAudience = false,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(JwtTokenHandler.JWT_SECURITY_KEY))
                 };
-            })
-                ;
+            });
+                
         }
     }
 }
