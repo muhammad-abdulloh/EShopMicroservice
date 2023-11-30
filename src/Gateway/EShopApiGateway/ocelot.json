@@ -15,7 +15,7 @@
     },
     // Orders webapi
     {
-      "UpstreamPathTemplate": "/api/Orders",
+      "UpstreamPathTemplate": "/api/Orders/GetAllOrders",
       "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -24,8 +24,21 @@
           "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/Orders"
+      "DownstreamPathTemplate": "/api/Orders/GetAllOrders"
     },
+    {
+      "UpstreamPathTemplate": "/api/Orders/CreateOrder",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "eshop.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Orders/CreateOrder"
+    },
+    //Baskets webapi
     {
       "UpstreamPathTemplate": "/api/Basket",
       "UpstreamHttpMethod": [ "Get", "Post", "Put" ],
