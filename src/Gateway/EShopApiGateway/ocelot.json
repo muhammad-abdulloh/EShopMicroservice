@@ -1,5 +1,19 @@
 {
   "Routes": [
+    //authenticate weba pi
+    {
+      "UpstreamPathTemplate": "/api/Account",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authenticationwebapi",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Account"
+    },
+    // Orders webapi
     {
       "UpstreamPathTemplate": "/api/Orders",
       "UpstreamHttpMethod": [ "Get", "Post", "Put" ],

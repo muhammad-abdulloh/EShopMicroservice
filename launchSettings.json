@@ -6,7 +6,8 @@
       "serviceActions": {
         "eshop.api": "StartDebugging",
         "eshopapigateway": "StartDebugging",
-        "basket.api": "StartDebugging"
+        "basket.api": "StartDebugging",
+        "authenticationwebapi": "StartDebugging"
       }
     }
   }

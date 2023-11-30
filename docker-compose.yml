@@ -13,7 +13,7 @@ services:
     networks:
       - backend
     ports:
-      - 7070:1433 
+      - 7170:1433 
 
   # basketdb:
   #   container_name: basket-dbcontainer
@@ -45,7 +45,7 @@ services:
       context: .
       dockerfile: src/Gateway/EShopApiGateway/Dockerfile
     ports:
-      - 7080:80    
+      - 7180:80    
     networks:
       - backend
 
@@ -62,4 +62,14 @@ services:
       - DB_HOST=eshopdb
       - DB_NAME=BasketDatabase
       - DB_SA_PASSWORD=pa@2or$%%dd
+
+
+  authenticationwebapi:
+    container_name: authentication-webapi
+    image: ${DOCKER_REGISTRY-}authenticationwebapi
+    build:
+      context: .
+      dockerfile: src/AuthenticationLayer/AuthenticationWebAPi/Dockerfile
+    networks:
+      - backend
 
