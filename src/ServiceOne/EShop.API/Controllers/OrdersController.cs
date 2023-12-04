@@ -24,7 +24,7 @@ namespace EShop.API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         public async ValueTask<IActionResult> CreateOrder(Order order)
         {
             await _eshopDbContext.Orders.AddAsync(order);
@@ -34,7 +34,7 @@ namespace EShop.API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Administrator,User")]
+        //[Authorize(Roles = "Administrator,User")]
         public async ValueTask<ActionResult> GetAllOrdersForUsers()
         {
             return Ok(_eshopDbContext.Orders);
