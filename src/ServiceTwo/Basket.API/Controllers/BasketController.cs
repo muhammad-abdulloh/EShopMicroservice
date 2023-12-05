@@ -1,6 +1,8 @@
 ﻿using Basket.API.Models;
+using Basket.Application.ExternalServices.UseRefit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Refit;
 
 namespace Basket.API.Controllers
 {
@@ -18,7 +20,15 @@ namespace Basket.API.Controllers
         [HttpGet]
         public async ValueTask<ActionResult> GetAllOrders()
         {
-            return Ok(_basketDbContext.Baskets);
+            /// domendan olish
+            //var userAPI = RestService.For<IEShopGetAllOrders>("https://jsonplaceholder.typicode.com");
+            // dockerdan olish
+            var userAPI = RestService.For<IEShopGetAllOrders>("http://eshop.api:80");
+            //api gatewaydan olish
+            //var userAPI = RestService.For<IEShopGetAllOrders>("http://host.docker.internal:7180");
+            var users = await userAPI.GetUsers();
+            return Ok(users);
+            //return Ok(_basketDbContext.Baskets);
         }
 
         [HttpPost]
@@ -29,5 +39,6 @@ namespace Basket.API.Controllers
 
             return Ok(order);
         }
+
     }
 }

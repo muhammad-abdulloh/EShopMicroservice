@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "src\ServiceTw
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AuthentificationLayer", "AuthentificationLayer", "{1E792552-B440-444D-B01B-490096316553}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationWebAPi", "src\AuthenticationLayer\AuthenticationWebAPi\AuthenticationWebAPi.csproj", "{7F8CFDBC-5101-4C89-83C5-67CF098C2C35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthenticationWebAPi", "src\AuthenticationLayer\AuthenticationWebAPi\AuthenticationWebAPi.csproj", "{7F8CFDBC-5101-4C89-83C5-67CF098C2C35}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTAuthentificationManager", "src\AuthenticationLayer\JWTAuthentificationManager\JWTAuthentificationManager.csproj", "{164F027B-AB02-40A7-B3D6-574796D27980}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Application", "src\ServiceTwo\Basket.Application\Basket.Application.csproj", "{6F4A7D0D-2E1B-4E04-AB48-C6E3F75DBD94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{164F027B-AB02-40A7-B3D6-574796D27980}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{164F027B-AB02-40A7-B3D6-574796D27980}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{164F027B-AB02-40A7-B3D6-574796D27980}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4A7D0D-2E1B-4E04-AB48-C6E3F75DBD94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4A7D0D-2E1B-4E04-AB48-C6E3F75DBD94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4A7D0D-2E1B-4E04-AB48-C6E3F75DBD94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4A7D0D-2E1B-4E04-AB48-C6E3F75DBD94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{1E792552-B440-444D-B01B-490096316553} = {C89384D4-2B21-46E3-8B41-97A19832E772}
 		{7F8CFDBC-5101-4C89-83C5-67CF098C2C35} = {1E792552-B440-444D-B01B-490096316553}
 		{164F027B-AB02-40A7-B3D6-574796D27980} = {1E792552-B440-444D-B01B-490096316553}
+		{6F4A7D0D-2E1B-4E04-AB48-C6E3F75DBD94} = {ACD2A02C-B3F3-4968-A393-6E1CE5C8661A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A989D3C-8E0E-4C35-9CC2-2A69C38533D1}

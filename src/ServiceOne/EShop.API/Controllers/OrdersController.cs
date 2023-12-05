@@ -17,7 +17,7 @@ namespace EShop.API.Controllers
         }
 
         [HttpGet]
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         public async ValueTask<ActionResult> GetAllOrders()
         {
             return Ok(_eshopDbContext.Orders);
